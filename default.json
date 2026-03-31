@@ -3,7 +3,7 @@
   "extends": [
     "config:recommended"
   ],
-  "prConcurrentLimit": 9,
+  "prConcurrentLimit": 2,
   "semanticCommits": "enabled",
   "labels": [
     "dependencies"
