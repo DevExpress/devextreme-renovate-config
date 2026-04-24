@@ -1,0 +1,49 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchDepNames": [
+        "node"
+      ],
+      "allowedVersions": ">=21 <24"
+    },
+    {
+      "matchDepNames": [
+        "node"
+      ],
+      "matchDepTypes": [
+        "engines"
+      ],
+      "enabled": true
+    },
+    {
+      "matchDepNames": [
+        "node"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "matchDepNames": [
+        "node"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "automerge": true,
+      "minimumReleaseAge": "7 days"
+    },
+    {
+      "matchDepNames": [
+        "node"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": true
+    }
+  ]
+}
+
