@@ -1,23 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
-  ],
-  "prConcurrentLimit": 2,
-  "semanticCommits": "enabled",
-  "labels": [
-    "dependencies"
-  ],
-  "packageRules": [
-    {
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "matchDatasources": [
-        "npm"
-      ],
-      "minimumReleaseAge": "7 days"
-    }
+    "config:recommended",
+    "github>DevExpress/devextreme-renovate-config:common",
+    "github>DevExpress/devextreme-renovate-config:nodejs"
   ]
 }

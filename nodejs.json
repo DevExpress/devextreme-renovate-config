@@ -1,0 +1,42 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/(^|/)\\.npmrc$/"
+      ],
+      "matchStrings": ["use-node-version=(?<currentValue>[\\d.]+)"],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "node-version"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDepNames": ["node"],
+      "allowedVersions": ">=24"
+    },
+    {
+      "matchDepNames": ["node"],
+      "matchDepTypes": ["engines"],
+      "enabled": true
+    },
+    {
+      "matchDepNames": ["node"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
+      "matchDepNames": ["node"],
+      "matchUpdateTypes": ["minor"],
+      "automerge": true,
+      "minimumReleaseAge": "7 days"
+    },
+    {
+      "matchDepNames": ["node"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
+  ]
+}
+
