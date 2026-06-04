@@ -19,6 +19,7 @@
     {
       "matchDepNames": ["node"],
       "matchDepTypes": ["engines"],
+      "rangeStrategy": "bump",
       "enabled": true
     },
     {
